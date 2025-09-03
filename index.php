@@ -1,3 +1,7 @@
+<?php 
+    require("connection.php")
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,20 +32,6 @@
                 </thead>
                 <tbody>
                 <?php
-                // --- DB Connection ---
-                error_reporting(E_ALL);
-                ini_set('display_errors', 1);
-
-                $DB_HOST = "10.114.97.179";  // <- make sure this is correct
-                $DB_USER = "dashboard_user";
-                $DB_PASS = "StrongPassword123!";
-                $DB_NAME = "dashboard_data";
-
-                $conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
-
-                if ($conn->connect_error) {
-                    die("<tr><td colspan='8'>Database connection failed: " . $conn->connect_error . "</td></tr>");
-                }
 
                 $sql = "SELECT hostname, os_type, date, time, uptime, freeram, totalram, cores
                         FROM details

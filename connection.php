@@ -1,8 +1,8 @@
 <?php
-$DB_HOST = "10.114.97.179"
-$DB_USER = "dashboard_user";
-$DB_PASS = "StrongPassword123!";
-$DB_NAME = "dashboard_data";
+$DB_HOST = "";
+$DB_USER = "";
+$DB_PASS = "";
+$DB_NAME = "";
 
 $conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
 
