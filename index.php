@@ -52,11 +52,13 @@
                                 <td>{$row['time']}</td>
                                 <td>{$row['uptime']}</td>
                                 <td>{$row['totalram']}</td>
-                                <td>{$row['freeram']}</td>"
+                                <td>{$row['freeram']}</td>
+                                <td>"
                 ?>
                 <?php echo 100*($row['totalram'] - $row['freeram']) / $row['totalram']; ?>
                 <?php
                         echo "
+                                </td>
                                 <td>{$row['cores']}</td>
                               </tr>";
                     }
