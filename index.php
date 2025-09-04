@@ -27,6 +27,7 @@
                         <th>Uptime (s)</th>
                         <th>Total RAM (MB)</th>
                         <th>Free RAM (MB)</th>
+                        <th>% RAM Usage</th>
                         <th>Cores</th>
                     </tr>
                 </thead>
@@ -51,7 +52,11 @@
                                 <td>{$row['time']}</td>
                                 <td>{$row['uptime']}</td>
                                 <td>{$row['totalram']}</td>
-                                <td>{$row['freeram']}</td>
+                                <td>{$row['freeram']}</td>"
+                ?>
+                <?php echo 100*($row['totalram'] - $row['freeram']) / $row['totalram']; ?>
+                <?php
+                        echo "
                                 <td>{$row['cores']}</td>
                               </tr>";
                     }

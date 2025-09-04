@@ -1,12 +1,15 @@
 <?php
-$DB_HOST = "";
-$DB_USER = "";
-$DB_PASS = "";
-$DB_NAME = "";
+// Database credentials
+$servername = ""; 
+$username   = "";
+$password   = "";
+$database   = "";
 
-$conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+// Create connection with error reporting
+$conn = mysqli_connect($servername, $username, $password, $database);
 
-if ($conn->connect_error) {
-    die("Database connection failed: " . $conn->connect_error);
+// Check connection
+if (!$conn) {
+    die("Database connection failed: (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 }
 ?>
